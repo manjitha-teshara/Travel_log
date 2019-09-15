@@ -11,6 +11,6 @@ public class ApplicationController {
 	@ResponseBody
 	@RequestMapping("/home")
 	public String Hello() {
-		return "Hello Travel Log";
+		return "Hello Travel Log start";
 	}
 }
