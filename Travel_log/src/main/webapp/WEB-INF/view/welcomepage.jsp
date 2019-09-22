@@ -7,6 +7,6 @@
 <title>Travel Log</title>
 </head>
 <body>
-	<h1>Welcome to Travel Log!</h1>
+	<h1>Welcome to Travel Log! jsp</h1>
 </body>
 </html>
