@@ -16,7 +16,7 @@ public class RestController {
 	public String hello() {
 		return "This is Home page";
 	}
-	@GetMapping("/save-user")
+	@GetMapping("/saveuser")
 	public String saveUser(@RequestParam String username,@RequestParam String fname,@RequestParam String lname,@RequestParam String email,@RequestParam String password) {
 		User user = new User(username,fname,lname,email,password);
 		userService.saveMyUser(user);

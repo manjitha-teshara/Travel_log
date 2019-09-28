@@ -14,13 +14,12 @@
 
 <link rel="stylesheet" href="static/css/main.css">
 <meta charset="ISO-8859-1">
-<title>Travel Log</title>
+<title>Traveler</title>
 </head>
 <body>
-<!--  	<c:choose>
-		<c:when test="${mode=='MODE_SIGNUP' }">  -->
+<c:choose>
+		<c:when test="${mode=='MODE_SIGNUP' }"> 
 
-			<h1>Sign up</h1>
 			<div class="container h-100">
 				<div class="d-flex justify-content-center h-100">
 					<div class="user_card">
@@ -32,7 +31,7 @@
 							</div>
 						</div>
 						<div class="d-flex justify-content-center form_container">
-							<form method="post" action="save-user">
+							<form method="post" action="saveuser">
 								<div class="input-group mb-3">
 									<!-- --------------- -->
 									<div class="input-group-append">
@@ -86,12 +85,13 @@
 											me</label>
 									</div>
 								</div>
-							</form>
+						<!-- 	</form> -->
 						</div>
 						<div class="d-flex justify-content-center mt-3 login_container">
 							<button type="submit" name="button" class="btn login_btn"
-								value="Register">Login</button>
+								value="Register">Sign Up</button>
 						</div>
+						</form>
 						<div class="mt-4">
 							<div class="d-flex justify-content-center links">
 								Don't have an account? <a href="/signup" class="ml-2">Sign
@@ -104,7 +104,7 @@
 					</div>
 				</div>
 			</div>
-		</c:when>
-	</c:choose>
+	</c:when>
+	</c:choose> 
 </body>
 </html>

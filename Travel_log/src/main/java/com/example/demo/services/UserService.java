@@ -11,13 +11,13 @@ import com.example.demo.repository.UserRepository;
 @Transactional
 public class UserService {
 	
-	private final UserRepository userRepository;
+	private static UserRepository userRepository;
 	
 	public UserService(UserRepository userRepository) {
 		this.userRepository=userRepository;
 	}
 	
-	public void saveMyUser(User user) {
+	public static void saveMyUser(User user) {
 		userRepository.save(user);
 	}
 }
