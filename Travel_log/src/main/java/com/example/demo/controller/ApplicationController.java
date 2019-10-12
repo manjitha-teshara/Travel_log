@@ -4,6 +4,7 @@ package com.example.demo.controller;
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -37,6 +38,14 @@ public class ApplicationController {
 		UserService.saveMyUser(user);
 		request.setAttribute("mode", "MODE_SIGNUP");
 		return "signin";
+	}
+	
+	@GetMapping("/userHome")
+	public String userHomePage(HttpServletRequest request) {
+		request.setAttribute("users", UserService.showAllUsers());
+		request.setAttribute("mode", "MODE_HOME");
+		return "userHome";
+		
 	}
 	
 	
