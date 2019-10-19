@@ -26,11 +26,11 @@ public class UserService {
 	
 	public static List<User> showAllUsers() {
 		List<User> users=new ArrayList<User>();
-		for(User user1:userRepository.findAll()) {
-			users.add(user1);
-			System.out.println("################");
-			System.out.print(user1);
-			System.out.println("################");
+		for(User user:userRepository.findAll()) {
+			users.add(user);
+//			System.out.println("################");
+//			System.out.print(user);
+//			System.out.println("################");
 
 		}
 		return users;
