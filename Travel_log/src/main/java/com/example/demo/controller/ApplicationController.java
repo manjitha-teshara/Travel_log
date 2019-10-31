@@ -43,7 +43,7 @@ public class ApplicationController {
 		request.setAttribute("users", UserService.showAllUsers());
 		for (User user : UserService.showAllUsers()) {
 
-			System.out.println("****************");
+			System.out.print("****************");
 			System.out.print(user);
 			System.out.println("****************");
 
@@ -62,6 +62,7 @@ public class ApplicationController {
 	@RequestMapping("/ck")
 	public String welcome(ModelMap model) {
 	    model.addAttribute("message", "Dream World");
+	    System.out.println("ck fk");
 	    return "userHome";
 	}
 

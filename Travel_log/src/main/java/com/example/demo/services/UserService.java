@@ -2,6 +2,7 @@ package com.example.demo.services;
 
 import javax.transaction.Transactional;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.example.demo.model.User;
@@ -14,6 +15,7 @@ import java.util.List;
 @Transactional
 public class UserService {
 	
+	@Autowired
 	private static UserRepository userRepository;
 	
 	public UserService(UserRepository userRepository) {
@@ -28,9 +30,9 @@ public class UserService {
 		List<User> users=new ArrayList<User>();
 		for(User user:userRepository.findAll()) {
 			users.add(user);
-//			System.out.println("################");
-//			System.out.print(user);
-//			System.out.println("################");
+			System.out.print("################");
+			System.out.print(user);
+			System.out.println("################");
 
 		}
 		return users;
