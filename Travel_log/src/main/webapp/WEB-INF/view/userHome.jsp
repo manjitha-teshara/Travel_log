@@ -5,21 +5,28 @@
 
 <html>
 <head>
+
+<link rel="stylesheet"
+	href="static/bootstrap-4.3.1-dist/css/bootstrap.min.css">
+<link rel="stylesheet"
+	href="static/bootstrap-4.3.1-dist/css/bootstrap.min.css">
+<script src="bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="static/css/userHome.css">
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
 </head>
 <body>
-<c:choose>	
-	<c:when test="${mode=='MODE_HOME' }">
-		<c:forEach var="user" items="${users}">			
-			<h3>${user.username}</h3>			
-		</c:forEach>
-	</c:when>
-	<c:when test="${mode=='MODE_HOME' }">
-		<h1>Hello ${message}</h1>
-		<div id="message">${message}</div>
-	</c:when>
-	
-</c:choose>
+	<div class="container-fluid">
+		<div class="row cover-window">
+			<div class="col-md-4"><image class="profile-image"
+			src="../../static/images/userHome/profileImage.jpg"></div>
+			<div class="col-md-8"></div>
+		</div>
+		<div class="row">
+			<div class="col-md-2"></div>
+			<div class="col-md-6 post-window"></div>
+			<div class="col-md-4"></div>			
+		</div>
+	</div>
 </body>
 </html>
